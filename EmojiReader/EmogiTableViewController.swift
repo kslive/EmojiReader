@@ -28,6 +28,15 @@ class EmogiTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.navigationItem.leftBarButtonItem?.tintColor = .black
     }
+    
+    @IBAction func unwinSegue(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveSegue" else { return }
+        let sourceVC = segue.source as! NewEmojiTableViewController
+        let emoji = sourceVC.emoji
+        objects.append(emoji)
+        let newIndexPath = IndexPath(row: objects.count - 1, section: 0)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

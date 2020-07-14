@@ -185,9 +185,15 @@
                     <navigationItem key="navigationItem" id="F2j-qZ-sEH">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="nfD-is-2t6">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="lAe-fR-axm" kind="unwind" identifier="" unwindAction="unwinSegueWithSegue:" id="Puc-fE-098"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="b3P-8S-ZbX">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="lAe-fR-axm" kind="unwind" identifier="saveSegue" unwindAction="unwinSegueWithSegue:" id="Et7-D2-1Ew"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -198,6 +204,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igh-fv-6MH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lAe-fR-axm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2359" y="19"/>
         </scene>
